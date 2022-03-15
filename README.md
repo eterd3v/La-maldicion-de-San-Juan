@@ -6,7 +6,7 @@ Curso actualmente el grado de Ingeniería Informática en la Universidad de Jaé
 
 ## ADVERTENCIA
 Muy a mi pesar he de indicar que la realización de este juego es demasiado largo como lo diseñé en un principio (adjunto el archivo [aquí](https://github.com/antjarm/La-maldici-n-de-San-Juan-/files/8257574/historia.alternativas.e.interacciones.txt)
-) y por este motivo NO ESTÁ COMPLETO. Le faltan la partes de SALIR DE CASA y VOLVER A CASA. Aunque es parcialmente jugable siento las molestias. 
+) y por este motivo NO ESTÁ COMPLETO. Le falta la parte entre que SALE DE CASA y VUELVE A CASA. Aunque es parcialmente jugable y muy entretenido siento las molestias. 
 
 ### 1. Título y descripción del juego
 #### Título: 

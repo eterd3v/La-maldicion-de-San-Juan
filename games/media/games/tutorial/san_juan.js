@@ -201,7 +201,7 @@ undum.game.situations = {
 
     salir_casa_1: new undum.SimpleSituation(
         "<p class='transient'><br><em>Uf menos mal. La próxima tengo que estar más atento de que las tenía aquí</em> piensas, mientras abres la puerta para salir de casa. " +
-        "<br><a href='puerta'>Continuar</a></p>"
+        "<br><a href='volver_casa'>Continuar</a></p>"
         , {
             enter: function (character, system, action) {
                 system.setQuality("suerte", character.qualities.suerte+1);
@@ -210,7 +210,7 @@ undum.game.situations = {
     ),
     salir_casa_2: new undum.SimpleSituation(
         "<p class='transient'><br>No están puestas. Te quedas buscando 15 minutos por todos lados pero resulta que lo tenías en los bolsillos de los pantalones."+
-        "<br><a href='puerta'>Continuar</a></p>"
+        "<br><a href='volver_casa'>Continuar</a></p>"
         , {
             enter: function (character, system, action) {
                 system.setQuality("suerte", character.qualities.suerte-1);
@@ -219,14 +219,42 @@ undum.game.situations = {
     ),
     salir_casa_3: new undum.SimpleSituation(
         "<p class='transient'><br>Llevas algo de prisa y decides que sales sin las llaves. Pero te acuerdas que eres de esos que lo guardan bajo el felpudo."+
-        "<br><a href='puerta'>Continuar</a></p>"
+        "<br><a href='volver_casa'>Continuar</a></p>"
     ),
 
     <!-- SALIMOS DE CASA -->
 
-    puerta: new undum.SimpleSituation(
-        "<p class='transient'><br>Llevas algo de prisa y decides que sales sin las llaves. Pero te acuerdas que eres de esos que lo guardan bajo el felpudo. </p>"
-        , {}
+    <!-- VOLVEMOS A CASA -->
+
+    volver_casa: new undum.SimpleSituation(
+        "<p><br>" +
+        "Llegas a casa, dejas todas tus cosas en la mesita de noche y vas directamente a dormir, ya que ha sido un día muy largo.<br>" +
+        "<br>Dejas que las sabanas te cobijen hasta quedarte dormido mientras piensas sobre todo el día de hoy.<br>" +
+        "<a href='./final'>Tienes sueño...</a>" +
+        "</p>"
+        , {
+            actions: {
+                "final": function (character, system, from) {
+                    if (character.qualities.secretos >= 6) {
+                        system.doLink('fin2');
+                    } else {
+                        system.doLink('fin1');
+                    }
+                }
+            }
+        }
+    ),
+
+    fin1: new undum.SimpleSituation(
+        "<p>Aparece San Juan en mitad de tus sueños, mostrando un figura angelical. Este santo te dice:<br>" +
+        "<br>San Juan - <em>El mayor problema puede que esté en nosotros, pero, al igual que la bondad, también reside en nosotros actuar obrando de buena fe.</em></p>" +
+        "<h1>FIN</h1>"
+    ),
+    fin2: new undum.SimpleSituation(
+        "<p>Aparece San Pedro en mitad de tus sueños, mostrando un figura angelical. Este santo te dice:<br>" +
+        "<br>San Pedro - <em>Hoy me han intentado traer a tu amigo a que le juzge por sus pecados, pero viendo tus actos de hoy, he presenciado que no es lugar ni el momento. Sigue obrando el bien, pues así" +
+        "encontrarás la felicidad en ti mismo siempre que empeñes en buscarla.</em></p>" +
+        "<h1>FIN</h1>"
     ),
 
     plantilla: new undum.SimpleSituation(
@@ -280,6 +308,8 @@ undum.game.situations = {
             }
         }
     ),
+
+
 
     fin: new undum.SimpleSituation(
         "<h1>FIN</h1>",
