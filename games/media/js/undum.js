@@ -320,8 +320,8 @@
         }
         if (this.choices) {
             var choices = system.getSituationIdChoices(this.choices,
-                                                       this.minChoices,
-                                                       this.maxChoices);
+                this.minChoices,
+                this.maxChoices);
             system.writeChoices(choices);
         }
     };
@@ -336,7 +336,7 @@
     };
     SimpleSituation.prototype.optionText = function(character, system, sitn) {
         var parentResult = Situation.prototype.optionText.call(this, character,
-                                                               system, sitn);
+            system, sitn);
         if (parentResult === undefined) {
             return this.heading;
         } else {
@@ -491,13 +491,8 @@
      */
     var FudgeAdjectivesQuality = function(title, opts) {
         WordScaleQuality.call(this, title, [
-<<<<<<< HEAD
-            "terrible".l(), "pobre".l(), "mediocre".l(),
-            "normal".l(), "decente".l(), "buena".l(), "magnífica".l()
-=======
             "terrible".l(), "poor".l(), "mediocre".l(),
             "fair".l(), "good".l(), "great".l(), "superb".l()
->>>>>>> d89c238 (Initial commit)
         ], opts);
         if (!('offset' in opts)) this.offset = -3;
     };
@@ -532,11 +527,7 @@
      */
     var YesNoQuality = function(title, opts) {
         var myOpts = $.extend({
-<<<<<<< HEAD
-            yesDisplay: "sí".l(),
-=======
             yesDisplay: "yes".l(),
->>>>>>> d89c238 (Initial commit)
             noDisplay: "no".l()
         }, opts);
         QualityDefinition.call(this, title, opts);
@@ -574,11 +565,11 @@
     var System = function() {
         this.rnd = null;
         this.options = {
-          all_links_once: true,
-          mobile_hide_speed: 500,
-          slide_up_speed: 500,
-          fade_speed: 1500,
-          progress_bar_speed: 1000
+            all_links_once: true,
+            mobile_hide_speed: 500,
+            slide_up_speed: 500,
+            fade_speed: 1500,
+            progress_bar_speed: 1000
         }
         this.time = 0;
     };
@@ -717,7 +708,7 @@
             }
 
             var optionText = situation.optionText(character, this,
-                                                  currentSituation);
+                currentSituation);
             if (!optionText) optionText = "choice".l({number:i+1});
             var $option = $("<li>");
             var $a;
@@ -1086,13 +1077,13 @@
                     setTimeout(function() {
                         if (mobile) {
                             bar.fadeOut(that.options.mobile_hide_speed, function() {
-                              $(this).remove();
+                                $(this).remove();
                             });
                         } else {
                             bar.animate({opacity: 0}, that.options.fade_speed).
-                                slideUp(that.options.slide_up_speed, function() {
-                                    $(this).remove();
-                                });
+                            slideUp(that.options.slide_up_speed, function() {
+                                $(this).remove();
+                            });
                         }
                     }, 2000);
                 }
@@ -1315,7 +1306,7 @@
             var $situation = $(this);
             var id = $situation.attr("id");
             assert(game.situations[id] === undefined,
-                   "existing_situation".l({id:id}));
+                "existing_situation".l({id:id}));
 
             var content = $situation.html();
             var opts = {
@@ -1453,8 +1444,8 @@
         // Make sure we want to display this quality.
         var qualityDefinition = game.qualities[qualityId];
         if (!qualityDefinition) {
-          throw new Error("Can't display a quality that hasn't been defined: "+
-                          qualityId);
+            throw new Error("Can't display a quality that hasn't been defined: "+
+                qualityId);
         }
 
         // Work out how the value should be displayed.
@@ -1646,13 +1637,13 @@
             }));
             if (interactive) {
                 if (mobile) {
-                  contentToHide.fadeOut(system.options.mobile_hide_speed);
+                    contentToHide.fadeOut(system.options.mobile_hide_speed);
                 } else {
-				        // Get fate out speed of options, and slide up speed variables.
-                  contentToHide.
+                    // Get fate out speed of options, and slide up speed variables.
+                    contentToHide.
                     animate({opacity: 0}, system.options.fade_speed).
                     slideUp(system.options.slide_up_speed, function() {
-                      $(this).remove();
+                        $(this).remove();
                     });
                 }
             } else {
@@ -1699,9 +1690,9 @@
                         // If we're a once-click, remove all matching
                         // links.
                         if (system.options.all_links_once === false
-                          || (system.options.all_links_once === true
-                          && (a.hasClass("once") || href.match(/[?&]once[=&]?/)))) {
-                          system.clearLinks(href);
+                            || (system.options.all_links_once === true
+                                && (a.hasClass("once") || href.match(/[?&]once[=&]?/)))) {
+                            system.clearLinks(href);
                         }
 
                         processClick(href);
@@ -2250,18 +2241,18 @@
             var bonus = match[3]?parseInt(match[3], 10):0;
 
             switch (match[2]) {
-            case 'A':
-                return this.aveDice(num, bonus);
-            case 'F':
-                sides = 3;
-                bonus -= num*2;
-                break;
-            case '%':
-                sides = 100;
-                break;
-            default:
-                sides = parseInt(match[2], 10);
-                break;
+                case 'A':
+                    return this.aveDice(num, bonus);
+                case 'F':
+                    sides = 3;
+                    bonus -= num*2;
+                    break;
+                case '%':
+                    sides = 100;
+                    break;
+                default:
+                    sides = parseInt(match[2], 10);
+                    break;
             }
             return this.dice(num, sides, bonus);
         };

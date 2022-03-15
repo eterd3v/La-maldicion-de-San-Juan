@@ -20,48 +20,22 @@ undum.game.fadeSpeed = 1500
  * option. */
 undum.game.slideUpSpeed = 500
 
-/* The situations that the game can be in. Each has a unique ID. */
-undum.game.situations = {
-    start: new undum.SimpleSituation(
-        "<a href='./sin-moneda'>pincha aqui</a>\
-        <br>\
-        <a href='last'>siguiente</a>",
-        {
-            actions: {
-                sinmoneda: function (character, system, action) {
-                    system.setQuality("moneda_antigua", 0);
-                }
-            }
-        }
-    ),
-    "last": new undum.SimpleSituation(
-        "<h1>Where to Go Now</h1>\
-        <p>So that's it. We've covered all of Undum. This situation is the\
-        end, because it has no further links. The 'The End' message is\
-        just in the HTML output of this situation, it isn't anything special\
-        to Undum</p>\
-        \
-        <p>I've added an\
-        inspiration quality to your character list. Its time for you to\
-        crack open the game file and write your own story.</p>\
-        <h1>The End</h1>",
-        {
-            tags: ["topic"],
-            optionText: "Finish the Tutorial",
-            displayOrder: 8,
-            enter: function (character, system, from) {
-                system.setQuality("inspiration", 1);
-                system.setCharacterText(
-                    "<p>You feel all inspired, why not have a go?</p>"
-                );
-            }
-        }
-    )
-
-}
 // ---------------------------------------------------------------------------
 /* The Id of the starting situation. */
-undum.game.start = "start";
+undum.game.start = "comienzo";
+
+/* The situations that the game can be in. Each has a unique ID. */
+undum.game.situations = {
+    comienzo: new undum.SimpleSituation(
+        "<h1>Comienzo</h1>" +
+        "<p><a href='sig'>siguiente</a></p>",
+    ),
+
+    sig: new undum.SimpleSituation(
+        "<h1>FIN</h1>",
+    ),
+
+};
 
 // ---------------------------------------------------------------------------
 /* Here we define all the qualities that our characters could
