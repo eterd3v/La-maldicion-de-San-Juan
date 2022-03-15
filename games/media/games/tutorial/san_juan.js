@@ -102,12 +102,6 @@ undum.game.qualities = {
         {priority:"0002", group: 'estadisticas'})
 };
 
-/**
- * Es una variable que sirve para almacenar si puedes acceder al final alternativo del juego.
- * @type {number}
- */
-var final_alternativo = 0;
-
 // ---------------------------------------------------------------------------
 /* The qualities are displayed in groups in the character bar. This
  * determines the groups, their heading (which can be null for no
@@ -124,6 +118,5 @@ undum.game.qualityGroups = {
  * to configure the character at the start of play. */
 undum.game.init = function (character, system) {
     character.qualities.suerte = 0;
-    //character.qualities.secretos = 1;
     system.setCharacterText("<p>Coloca el ratón encima de lo que lleva tu personaje para ver más información.</p>");
 };
