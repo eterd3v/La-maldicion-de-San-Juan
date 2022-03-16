@@ -1,6 +1,6 @@
 # Práctica 2: Proyecto individual
 
-##Autor
+## Autor
 Antonio Javier Armenteros Martínez - [ajam0011@red.ujaen.es](mailto:ajam0011@red.ujaen.es)
 Curso actualmente el grado de Ingeniería Informática en la Universidad de Jaén.
 
