@@ -344,7 +344,7 @@ undum.game.situations = {
         "<p class='transient'>Al llegar, ves que tus amigos miran fijamente a Pedro teniendo convulsiones en el suelo. Intentas hablar con él pero es imposible, delira mucho y empieza a respirar bastante mal.</p>" +
         "</br><p class='transient'>Preguntas si viene una ambulancia pero parece que ya llamaron y no llegan todavía. Que el tráfico se lo impide.</p>",{
             enter: function (character, system, action) {
-                if (character.qualities.secretos >= 5){
+                if (character.qualities.secretos >= 4){
                     system.doLink('./pedro1');
                 }else{
                     system.doLink('./pedro2');
@@ -357,7 +357,7 @@ undum.game.situations = {
                     "que lleguen la policía o la ambulancia.</p>" +
                     "<p class='transient'></br>Finalmente, llega una ambulancia y la policía. Te ofrecen llevarte en coche hasta tu casa pero prefieres <a href='volver_casa'>ir andando</a>.</p>",
                 "pedro2": "</br><p>Pedro empieza a agonizar con el delirio. Nadie se atreve a hacer nada pero en un último acto" +
-                    " miras a la hoguera y ves en ella una figura angelical que te asiente con la cabeza. Te aferras a la esperanza, pones tu amuleto en el cuello de Pedro y recitas la anotación que te dió la chica de antes.</br></br>" +
+                    " miras a la hoguera y ves en ella una figura angelical que te asiente con la cabeza. Te aferras a la esperanza, pones tu amuleto en el cuello de Pedro y recitas la anotación que te dió la mujer de antes.</br></br>" +
                     "Él empieza ponerse mejor. </br> Juntos entablaís conversación donde te explican que Pedro empezó a ver alucinaciones, pues, creían que intentaba convencer a San Pedro de que juraba no haberle robadoç" +
                     "el dinero a la anciana de su vecina, la cuál salía muchas veces de casa y cuando estaba descansando en ella la oía recitar devotamente.</p>" +
                     "</br><p class='transient'>Finalmente, llega una ambulancia y la policía. Te ofrecen llevarte en coche hasta tu casa y <a href='volver_casa'>aceptas que te lleven</a>.</p>"
@@ -379,7 +379,7 @@ undum.game.situations = {
             },
             actions: {
                 "final": function (character, system, from) {
-                    if (character.qualities.secretos >= 5) {
+                    if (character.qualities.secretos >= 4) {
                         system.doLink('fin2');
                     } else {
                         system.doLink('fin1');
@@ -396,8 +396,8 @@ undum.game.situations = {
     ),
     fin2: new undum.SimpleSituation(
         "<p>Aparece San Pedro en mitad de tus sueños, mostrando su figura angelical. Este santo te dice:<br>" +
-        "<br>San Pedro - <em>Hoy me han intentado traer a tu amigo a que le juzge por sus pecados, pero viendo tus actos de hoy, he presenciado que no es lugar ni el momento. Sigue obrando el bien, pues así" +
-        "encontrarás la felicidad en ti mismo siempre que empeñes en buscarla.</em></p>" +
+        "<br>San Pedro - <em>Hoy me han intentado traer a tu amigo a que le juzge por sus pecados, pero viendo tus actos de hoy, he presenciado que no es lugar ni momento. " +
+        "Sigue obrando el bien, pues así encontrarás la felicidad en ti mismo siempre que empeñes en buscarla.</em></p>" +
         "<h1>FIN</h1>"
     ),
 

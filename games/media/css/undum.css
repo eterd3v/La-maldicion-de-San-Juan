@@ -21,8 +21,8 @@ body {
     border-radius: 2px;
 }
 #title {
-    max-width: 28em;
-    background: #e6e6c6 url("../img/title_bg.jpg") repeat -1.1em -1.1em;
+    max-width: 21em;
+    background: #e6e6c6 url("../../../recursos_proy/imagenes/fogata1.jpg") repeat -1.1em -1.1em;
     margin: 2.2em auto 1.1em auto;
     padding: 1.7em;
     border: 1.1em solid rgba(0,0,0,0.25);

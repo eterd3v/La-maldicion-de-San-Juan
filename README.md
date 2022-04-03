@@ -1,12 +1,16 @@
 # Práctica 2: Proyecto individual
 
+## Índice
+1. [Autor](#autor)
+
+<a name="autor"></a>
 ## Autor
 Antonio Javier Armenteros Martínez - [ajam0011@red.ujaen.es](mailto:ajam0011@red.ujaen.es)
 Curso actualmente el grado de Ingeniería Informática en la Universidad de Jaén.
 
 ## ADVERTENCIA
-Muy a mi pesar he de indicar que la realización de este juego es demasiado largo como lo diseñé en un principio (adjunto el archivo [aquí](https://github.com/antjarm/La-maldici-n-de-San-Juan-/files/8257574/historia.alternativas.e.interacciones.txt)
-) y por este motivo NO ESTÁ COMPLETO. Le falta la parte entre que SALE DE CASA y VUELVE A CASA. Aunque es parcialmente jugable y muy entretenido siento las molestias. 
+La historia de este juego es una adapatación de la historia original que escribí para esta práctica (puedes encontrar **spoilers al leerlo [aquí](https://github.com/antjarm/La-maldici-n-de-San-Juan-/files/8257574/historia.alternativas.e.interacciones.txt)**
+) ya que de implementar la original me iba a tomar mucho más tiempo del que se me ofrecío para la práctica.
 
 ### 1. Título y descripción del juego
 #### Título: 
@@ -35,5 +39,6 @@ En la siguiente imagen aparece las notificaciones que me ha lanzado el bot de Gi
 ![telegram](https://user-images.githubusercontent.com/99495041/158480877-7f2429ff-d742-4fda-93a9-c84365cea5b2.png)
 
 ### 5. Otras capturas de interés
-En esta imagen se aprecia como lo primero que he intentado conseguir, y así ha sido en parte, eran los objetos, habilidades y grupos de habilidades que se van a utilizar en el juego.
+En esta imagen se aprecia que lo primero que quise conseguir eran como funcionaban los objetos, habilidades y grupos de habilidades que se pueden implementar con Undum. En este caso hay introduje varios objetos que al final no se acabaron usando.
 ![juego_0](https://user-images.githubusercontent.com/99495041/158480920-5d0b5a55-f089-40ac-8dc4-3568d8057dee.png)
+
