@@ -4,7 +4,7 @@
 * [Autor](#autor)
 * [Advertencia](#advertencia)
 
-1. [Título y descripción del juego](#titulo-y-descripcion-del-juego)
+1. [Título y descripción del juego](#titulo-y-descripcion-del-juego) 
 
 ## Autor
 Antonio Javier Armenteros Martínez - [ajam0011@red.ujaen.es](mailto:ajam0011@red.ujaen.es)
