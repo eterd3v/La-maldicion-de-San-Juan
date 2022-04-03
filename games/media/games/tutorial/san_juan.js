@@ -192,11 +192,7 @@ undum.game.situations = {
         "<em><a href='salir_casa_2'>¿Miro en el cerrojo de la puerta?</a></em><br>" +
         "<em><a href='salir_casa_3'>¿Y si salgo sin llaves?</a></em><br>" +
         "</p>"
-        ,{
-            actions: {
-
-            }
-        }
+        ,{}
     ),
 
     salir_casa_1: new undum.SimpleSituation(
@@ -223,6 +219,27 @@ undum.game.situations = {
     ),
 
     <!-- SALIMOS DE CASA -->
+
+    anciana: new undum.SimpleSituation(
+        "<p class='transient'>Entusiasmado, sales de tu casa como siempre lo haces (pensando en tus cosas), pero justo al salir te chocas con alguien. Respondes: </p>" +
+        "<p class='transient'><em><a href=''></a>Perdone, ha sido culpa mía.</em></p></br>" +
+        "<p class='transient'><em><a href=''></a>Oiga, mire por donde va.</em></p></br>" +
+        "<p class='transient'><a href=''></a>Te sale un grito pequeño porque te asustas un poco</p></br>" ,{
+            //HACER QUE LA FUNCIÓN BAJE LA SUERTE Y HAGA DOLINK
+            "grito": function (character, system, action) {
+                system.setQuality("suerte", character.qualities.suerte-1);
+            }
+        }
+    ),
+
+    anciana2: new undum.SimpleSituation(
+        "<p>Te das una cuenta que es una anciana que es de estatura baja, viste de negro y lleva un velo que no deja ver su rostro. Te dice: </p>" +
+        "<em> Anciana - Sub nocte . . .</em> </br> <em> Anciana - Sub nocte Ioannis . . .</em>" +
+        "<p>Te lanza un objeto que consigues atrapar con el pectoral, mientras te aseguras con las manos que no se ha caído.</br>" +
+        "Al levantar la cabeza la ves que ya no está allí.</p>", {
+
+        }
+    ),
 
     <!-- VOLVEMOS A CASA -->
 
