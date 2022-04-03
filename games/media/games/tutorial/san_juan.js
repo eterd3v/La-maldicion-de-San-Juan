@@ -36,6 +36,7 @@ undum.game.situations = {
         "<p class='transient'><em><a href='llamada1'>Hola ¿quién es?</a></em></br></p>"
         , {}
     ),
+
     llamada1: new undum.SimpleSituation(
         "<p class='transient'></br>????? - <em>¡Hey! ¿Vas a venir hoy a ver los fuegos al final? </em>." +
         "</br> Te percatas de que es tu amigo Pedro así que respondes:</br>" +
@@ -44,15 +45,8 @@ undum.game.situations = {
         "<p class='transient'><em><a href='llamada2'>Lucía?.</a></em></br></p>" +
         "<p class='transient'><em><a href='llamada2'>Jose?.</a></em></br></p>" +
         "<p class='transient'> <em><a href='llamada2'>María?.</a></em></br></p>"
-        , {
-            actions: {
-                "op1": "<p>Yo - <em>¿Estará también Manolo?</em></p>",
-                "op2": "<p>Yo - <em>¿Estará también Lucía?</em></p>",
-                "op3": "<p>Yo - <em>¿Estará también Jose?</em></p>",
-                "op4": "<p>Yo - <em>¿Estará también María?</em></p>"
-            }
-        }
     ),
+
     llamada2: new undum.SimpleSituation(
         "<p class='transient'></br>Pedro - <em>Sí, también viene. Bueno, ¿qué me dices? que llevo dos días detras de tí jajaja</em></p>" +
         "<p class='transient'> <em><a href='llamada3'>Bueeeeeeeeeeeeno, me apunto.</a></em>" +
@@ -61,19 +55,18 @@ undum.game.situations = {
         , {
             actions: {
                 "opc2": "<br><p class='transient'>Yo - <em>No tengo muchas ganas hoy la verdad....</em></p>" +
-                    "<p class='transient'>Pedro - <em>No te creo. Con lo que tu eras... Además hay comida rica.</em></p>" +
+                    "<p class='transient'>Pedro - <em>No te creo. Con lo que tu eras... Además hay comida rica.</em></p></br>" +
                     "<p class='transient'> La respuesta no ha convencido lo suficiente...</br></p>",
                 "opc3": "<br><p class='transient'>Yo - <em>Es que tengo que....</em></p>" +
-                    "<p class='transient'>Pedro - <em>¡Venga ya, si te lo vas a pasar genial!.</em></p>" +
-                    "<p class='transient'> La respuesta no ha convencido lo suficiente...</br></p>"
+                    "<p class='transient'>Pedro - <em>¡Venga ya, si te lo vas a pasar genial!.</em></p></br>" +
+                    "<p class='transient'> La respuesta no ha convencido lo suficiente...</p></br>"
             }
         }
     ),
     llamada3: new undum.SimpleSituation(
-        "<p></br>Pedro - <em>¡Perfecto!. Te veo a la hora de cenar en la plaza donde haremos la hoguera. ¡Chao!</em></p>" +
+        "</br><p>Pedro - <em>¡Perfecto!. Te veo a la hora de cenar en la plaza donde haremos la hoguera. ¡Chao!</em></p>" +
         "<p class='transient'>Piensas: '<em>Este Pedro es de lo que no hay. Debe de estar en peligro de extinción..</em>'. </br></br> " +
-        "Ahora que te has comprometido con la ilusión de Pedro tienes que <a href='salon'>prepararte para salir</a>.</p>"
-        , {}
+        "Ahora que te has comprometido con la ilusión de Pedro tienes que <a href='salon'>prepararte para salir</a>.</p>", {}
     ),
 
     salon: new undum.SimpleSituation(
@@ -348,8 +341,8 @@ undum.game.situations = {
 
     hoguera1: new undum.SimpleSituation(
         "<h1>La hoguera</h1>" +
-        "<p>Al llegar, ves que tus amigos miran fijamente a Pedro teniendo dolores en el suelo. Intentas hablar con él pero es imposible, delira mucho y empieza a respirar bastante mal.</p>" +
-        "</br><p>Preguntas si viene una ambulancia pero parece que ya llamaron y no llegan todavía. Que el tráfico se lo impide.</p>",{
+        "<p class='transient'>Al llegar, ves que tus amigos miran fijamente a Pedro teniendo convulsiones en el suelo. Intentas hablar con él pero es imposible, delira mucho y empieza a respirar bastante mal.</p>" +
+        "</br><p class='transient'>Preguntas si viene una ambulancia pero parece que ya llamaron y no llegan todavía. Que el tráfico se lo impide.</p>",{
             enter: function (character, system, action) {
                 if (character.qualities.secretos >= 5){
                     system.doLink('./pedro1');
@@ -362,12 +355,12 @@ undum.game.situations = {
                     " empiezas a orar la anotación de la chica de antes sin efecto alguno sobre Pedro, pero de repente aparece la anciana del principio, colocando a Pedro su amuleto, el cuál" +
                     "trelucía con intensidad. </br></br> Ahora la anciana sufre los delirios de Pedro, lo cuál le provoca un infarto y fallece delante de todos. </br></br> Los allí presentes se alejan de la escena hasta" +
                     "que lleguen la policía o la ambulancia.</p>" +
-                    "<p></br>Finalmente, llega una ambulancia y la policía. Te ofrecen llevarte en coche hasta tu casa pero prefieres <a href='volver_casa'>ir andando</a>.</p>",
+                    "<p class='transient'></br>Finalmente, llega una ambulancia y la policía. Te ofrecen llevarte en coche hasta tu casa pero prefieres <a href='volver_casa'>ir andando</a>.</p>",
                 "pedro2": "</br><p>Pedro empieza a agonizar con el delirio. Nadie se atreve a hacer nada pero en un último acto" +
-                    " miras a la hoguera y ves en ella una figura angelical que te asiente con la cabeza. Con esperanzas pones tu amuleto a Pedro y recitas la anotación que te dió la chica de antes.</br></br>" +
+                    " miras a la hoguera y ves en ella una figura angelical que te asiente con la cabeza. Te aferras a la esperanza, pones tu amuleto en el cuello de Pedro y recitas la anotación que te dió la chica de antes.</br></br>" +
                     "Él empieza ponerse mejor. </br> Juntos entablaís conversación donde te explican que Pedro empezó a ver alucinaciones, pues, creían que intentaba convencer a San Pedro de que juraba no haberle robadoç" +
                     "el dinero a la anciana de su vecina, la cuál salía muchas veces de casa y cuando estaba descansando en ella la oía recitar devotamente.</p>" +
-                    "</br><p>Finalmente, llega una ambulancia y la policía. Te ofrecen llevarte en coche hasta tu casa y <a href='volver_casa'>aceptas que te lleven</a>.</p>"
+                    "</br><p class='transient'>Finalmente, llega una ambulancia y la policía. Te ofrecen llevarte en coche hasta tu casa y <a href='volver_casa'>aceptas que te lleven</a>.</p>"
             }
         }
     ),
@@ -376,7 +369,7 @@ undum.game.situations = {
 
     volver_casa: new undum.SimpleSituation(
         "<h1>Vuelta a casa</h1>" +
-        "<br><p> Llegas a casa, dejas todas tus cosas en la mesita de noche y vas directamente a dormir, ya que ha sido un día muy largo.<br>" +
+        "<br><p class='transient'> Llegas a casa, dejas todas tus cosas en la mesita de noche y vas directamente a dormir, ya que ha sido un día muy largo.<br>" +
         "<br>Dejas que las sabanas te cobijen hasta quedarte dormido mientras piensas sobre todo el día de hoy.<br>" +
         "<a href='./final'>Tienes sueño...</a></p></br>"
         , {
@@ -397,12 +390,12 @@ undum.game.situations = {
     ),
 
     fin1: new undum.SimpleSituation(
-        "<p>Aparece San Juan en mitad de tus sueños, mostrando un figura angelical. Este santo te dice:<br>" +
+        "<p>Aparece San Juan en mitad de tus sueños, mostrando su figura angelical. Este santo te dice:<br>" +
         "<br>San Juan - <em>El mayor problema puede que esté en nosotros, pero, al igual que la bondad, también reside en nosotros actuar obrando de buena fe.</em></p>" +
         "<h1>FIN</h1>"
     ),
     fin2: new undum.SimpleSituation(
-        "<p>Aparece San Pedro en mitad de tus sueños, mostrando un figura angelical. Este santo te dice:<br>" +
+        "<p>Aparece San Pedro en mitad de tus sueños, mostrando su figura angelical. Este santo te dice:<br>" +
         "<br>San Pedro - <em>Hoy me han intentado traer a tu amigo a que le juzge por sus pecados, pero viendo tus actos de hoy, he presenciado que no es lugar ni el momento. Sigue obrando el bien, pues así" +
         "encontrarás la felicidad en ti mismo siempre que empeñes en buscarla.</em></p>" +
         "<h1>FIN</h1>"
