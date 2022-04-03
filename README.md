@@ -1,9 +1,11 @@
 # Práctica 2: Proyecto individual
 
 ## Índice
-1. [Autor](#autor)
+* [Autor](#autor)
+* [Advertencia](#advertencia)
 
-<a name="autor"></a>
+1. [Título y descripción del juego](#titulo-y-descripcion-del-juego)
+
 ## Autor
 Antonio Javier Armenteros Martínez - [ajam0011@red.ujaen.es](mailto:ajam0011@red.ujaen.es)
 Curso actualmente el grado de Ingeniería Informática en la Universidad de Jaén.
