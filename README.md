@@ -25,7 +25,7 @@ La historia de este juego es una adapatación de la historia original que escrib
  - Juego conversacional creado con el framework Undum para las prácticas de Desarrollo Ágil y se basa en una historia misteriosa en un pueblo sobre la misma noche de San Juan y la relación de los santos con la festividad.
 
 ## 2. URL del tablero en Trello
-El enlace a mi tablero de trello es: [https://trello.com/b/Lab4juFx/pr%C3%A1ctica2](https://trello.com/b/Lab4juFx/pr%C3%A1ctica2)
+El enlace a mi tablero de trello es: [ELIMINADO]()
 
 ## 3. Capturas de pantalla del tablero en Trello
 En la siguiente imagen se puede apreciar el estado inicial del tablero de trello.
