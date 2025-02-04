@@ -12,9 +12,7 @@
 * [5. Otras capturas de pantalla](#5-otras-capturas-de-pantalla)
 
 ## Autor
-Antonio Javier Armenteros Martínez - [ajam0011@red.ujaen.es](mailto:ajam0011@red.ujaen.es)
-
-Curso actualmente el grado de Ingeniería Informática en la Universidad de Jaén.
+Este juego ha sido desarrollado íntegramente por Antonio Javier Armenteros Martínez
 
 ## ADVERTENCIA
 La historia de este juego es una adapatación de la historia original que escribí para esta práctica (puedes encontrar **spoilers al leerlo [aquí](https://github.com/antjarm/La-maldici-n-de-San-Juan-/files/8257574/historia.alternativas.e.interacciones.txt)**
